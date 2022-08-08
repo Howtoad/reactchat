@@ -24,7 +24,8 @@ const styles = {
 
 const Home = () => {
   /* const { messageArray } = useContext(MessageContext); */
-  const [messageArray, setMessageArray] = useState([])
+  const [messageArray, setMessageArray] = useState([]);
+/*   const [messages, setMessages] = useState([]); */
 
   return (
     <div css={styles.chatbox}>

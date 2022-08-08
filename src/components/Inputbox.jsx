@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import MessageContext from "./../context/MessageContext";
 
 const styles = {
@@ -18,7 +18,7 @@ const styles = {
   `,
 };
 
-const InputBox = ({messageArray, setMessageArray}) => {
+const InputBox = ({ messageArray, setMessageArray }) => {
   /* const { messageArray, setMessageArray } = useContext(MessageContext); */
   console.log(messageArray);
 
@@ -40,6 +40,7 @@ const InputBox = ({messageArray, setMessageArray}) => {
     let newMessageArray = messageArray;
     newMessageArray.push(messageObject);
     setMessageArray(newMessageArray);
+    e.target.value = "";
     console.log(messageArray);
   };
 
